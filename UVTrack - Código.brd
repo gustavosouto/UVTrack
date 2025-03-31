@@ -88,12 +88,13 @@ No holes, no ICSP connections.
 <package name="GL5528" urn="urn:adsk.eagle:footprint:31494551/2"><pad name="1" x="-1.7018" y="0" drill="0.8" diameter="1.4"/><pad name="2" x="1.7018" y="0" drill="0.8" diameter="1.4"/><text x="-2.54" y="2.54" size="1.27" layer="27">&gt;VALUE</text><text x="-2.54" y="-3.81" size="1.27" layer="25">&gt;NAME</text><wire x1="-1.20015" y1="-1.97485" x2="-1.22555" y2="1.97485" width="0.2032" layer="21" curve="-116"/><wire x1="-1.22555" y1="1.97485" x2="1.20015" y2="1.97485" width="0.2032" layer="21"/><wire x1="1.20015" y1="1.97485" x2="1.22555" y2="-1.97485" width="0.2032" layer="21" curve="-116"/><wire x1="1.22555" y1="-1.97485" x2="-1.20015" y2="-1.97485" width="0.2032" layer="21"/><wire x1="0.762" y1="2.032" x2="0.762" y2="1.524" width="0.1016" layer="21" curve="-180"/><wire x1="0.762" y1="1.524" x2="-0.762" y2="1.524" width="0.1016" layer="21"/><wire x1="-0.762" y1="1.524" x2="-0.762" y2="1.016" width="0.1016" layer="21" curve="180"/><wire x1="-0.762" y1="1.016" x2="0.762" y2="1.016" width="0.1016" layer="21"/><wire x1="0.762" y1="1.016" x2="0.762" y2="0.508" width="0.1016" layer="21" curve="-180"/><wire x1="0.762" y1="0.508" x2="-0.762" y2="0.508" width="0.1016" layer="21"/><wire x1="-0.762" y1="0.508" x2="-0.762" y2="0" width="0.1016" layer="21" curve="180"/><wire x1="-0.762" y1="0" x2="0.762" y2="0" width="0.1016" layer="21"/><wire x1="0.762" y1="0" x2="0.762" y2="-0.508" width="0.1016" layer="21" curve="-180"/><wire x1="0.762" y1="-0.508" x2="-0.762" y2="-0.508" width="0.1016" layer="21"/><wire x1="-0.762" y1="-0.508" x2="-0.762" y2="-1.016" width="0.1016" layer="21" curve="180"/><wire x1="-0.762" y1="-1.016" x2="0.762" y2="-1.016" width="0.1016" layer="21"/><wire x1="0.762" y1="-1.016" x2="0.762" y2="-1.524" width="0.1016" layer="21" curve="-180"/><wire x1="0.762" y1="-1.524" x2="-0.762" y2="-1.524" width="0.1016" layer="21"/><wire x1="-0.762" y1="-1.524" x2="-0.762" y2="-2.032" width="0.1016" layer="21" curve="180"/></package>
 <package name="RESAD1016W63L850D250B" urn="urn:adsk.eagle:footprint:31513019/2"><description>Axial Resistor, 10.16 mm pitch, 8.50 mm body length, 2.50 mm body diameter
  &lt;p&gt;Axial Resistor package with 10.16 mm pitch (lead spacing), 0.63 mm lead diameter, 8.50 mm body length and 2.50 mm body diameter&lt;/p&gt;</description><pad name="1" x="-5.08" y="0" drill="0.83" diameter="1.43"/><pad name="2" x="5.08" y="0" drill="0.83" diameter="1.43"/><wire x1="-4.25" y1="-1.25" x2="-4.25" y2="1.25" width="0.12" layer="21"/><wire x1="-4.25" y1="1.25" x2="4.25" y2="1.25" width="0.12" layer="21"/><wire x1="4.25" y1="1.25" x2="4.25" y2="-1.25" width="0.12" layer="21"/><wire x1="4.25" y1="-1.25" x2="-4.25" y2="-1.25" width="0.12" layer="21"/><wire x1="-4.25" y1="0" x2="-4.111" y2="0" width="0.12" layer="21"/><wire x1="4.25" y1="0" x2="4.111" y2="0" width="0.12" layer="21"/><wire x1="-4.25" y1="-1.25" x2="-4.25" y2="1.25" width="0.12" layer="51"/><wire x1="-4.25" y1="1.25" x2="4.25" y2="1.25" width="0.12" layer="51"/><wire x1="4.25" y1="1.25" x2="4.25" y2="-1.25" width="0.12" layer="51"/><wire x1="4.25" y1="-1.25" x2="-4.25" y2="-1.25" width="0.12" layer="51"/><text x="0" y="1.885" size="1.27" layer="25" align="bottom-center">&gt;NAME</text><text x="0" y="-1.885" size="1.27" layer="27" align="top-center">&gt;VALUE</text></package>
-<package name="TO92" urn="urn:adsk.eagle:footprint:32629656/3"><description>&lt;b&gt;TO-92&lt;/b&gt;</description><wire x1="-2.095" y1="-1.651" x2="-0.7869" y2="2.5484" width="0.1524" layer="21" curve="-111.097684"/><wire x1="0.7869" y1="2.5484" x2="2.095" y2="-1.651" width="0.1524" layer="21" curve="-111.097684"/><wire x1="-2.095" y1="-1.651" x2="2.095" y2="-1.651" width="0.1524" layer="21"/><wire x1="-2.254" y1="-0.254" x2="-0.286" y2="-0.254" width="0.1524" layer="51"/><wire x1="-2.655" y1="-0.254" x2="-2.254" y2="-0.254" width="0.1524" layer="21"/><wire x1="-0.286" y1="-0.254" x2="0.286" y2="-0.254" width="0.1524" layer="21"/><wire x1="2.254" y1="-0.254" x2="2.655" y2="-0.254" width="0.1524" layer="21"/><wire x1="0.286" y1="-0.254" x2="2.254" y2="-0.254" width="0.1524" layer="51"/><wire x1="-0.7864" y1="2.5484" x2="0.7864" y2="2.5484" width="0.1524" layer="51" curve="-34.298964"/><pad name="1" x="-1.27" y="0" drill="0.8128" shape="octagon"/><pad name="2" x="0" y="1.905" drill="0.8128" shape="octagon"/><pad name="3" x="1.27" y="0" drill="0.8128" shape="octagon"/><text x="2.413" y="1.651" size="1.27" layer="25" ratio="10">&gt;NAME</text><text x="2.921" y="-1.27" size="1.27" layer="27" ratio="10">&gt;VALUE</text></package>
 <package name="MOTOR" urn="urn:adsk.eagle:footprint:32546057/2"><pad name="-" x="-2.54" y="0" drill="1.1176" diameter="3.1496" shape="octagon"/><pad name="+" x="2.54" y="0" drill="1.1176" diameter="3.1496" shape="octagon"/><wire x1="-4.318" y1="2.54" x2="-5.08" y2="1.778" width="0.1524" layer="21"/><wire x1="-5.08" y1="1.778" x2="-5.08" y2="-1.778" width="0.1524" layer="21"/><wire x1="-5.08" y1="-1.778" x2="-4.318" y2="-2.54" width="0.1524" layer="21"/><wire x1="-4.318" y1="-2.54" x2="4.318" y2="-2.54" width="0.1524" layer="21"/><wire x1="4.318" y1="-2.54" x2="5.08" y2="-1.778" width="0.1524" layer="21"/><wire x1="5.08" y1="-1.778" x2="5.08" y2="1.778" width="0.1524" layer="21"/><wire x1="5.08" y1="1.778" x2="4.318" y2="2.54" width="0.1524" layer="21"/><wire x1="2.54" y1="1.905" x2="2.54" y2="3.175" width="0.254" layer="21"/><wire x1="1.905" y1="2.54" x2="3.175" y2="2.54" width="0.254" layer="21"/><wire x1="-3.048" y1="2.54" x2="-1.905" y2="2.54" width="0.254" layer="21"/><text x="0" y="3.81" size="1.27" layer="25" align="bottom-center">&gt;NAME</text><text x="0" y="-3.81" size="1.27" layer="27" align="top-center">&gt;VALUE</text></package>
-<package name="LEDRD254W60D565H860B" urn="urn:adsk.eagle:footprint:16378492/2"><description>Radial LED (Round), 2.54 mm pitch, 5.65 mm body diameter, 8.60 mm body height
-&lt;p&gt;Radial LED (Round) package with 2.54 mm pitch (lead spacing), 0.60 mm lead width, 0.50 mm lead thickness, 5.65 mm body diameter and 8.60 mm body height&lt;/p&gt;</description><wire x1="2.5425" y1="1.2314" x2="-2.825" y2="0" width="0.12" layer="21" curve="154.1581"/><wire x1="2.5425" y1="-1.2314" x2="-2.825" y2="0" width="0.12" layer="21" curve="-154.1581"/><wire x1="2.5425" y1="1.2314" x2="2.5425" y2="-1.2314" width="0.12" layer="21"/><wire x1="-2.5946" y1="2.5946" x2="-1.8446" y2="2.5946" width="0.12" layer="21"/><wire x1="-2.2196" y1="2.9696" x2="-2.2196" y2="2.2196" width="0.12" layer="21"/><pad name="1" x="-1.27" y="0" drill="0.981" diameter="1.581"/><pad name="2" x="1.27" y="0" drill="0.981" diameter="1.581"/><circle x="0" y="0" radius="2.825" width="0.12" layer="51"/><text x="0" y="3.6046" size="1.27" layer="25" align="bottom-center">&gt;NAME</text><text x="0" y="-3.4642" size="1.27" layer="27" align="top-center">&gt;VALUE</text></package>
+<package name="TO92" urn="urn:adsk.eagle:footprint:32629656/3"><description>&lt;b&gt;TO-92&lt;/b&gt;</description><wire x1="-2.095" y1="-1.651" x2="-0.7869" y2="2.5484" width="0.1524" layer="21" curve="-111.097684"/><wire x1="0.7869" y1="2.5484" x2="2.095" y2="-1.651" width="0.1524" layer="21" curve="-111.097684"/><wire x1="-2.095" y1="-1.651" x2="2.095" y2="-1.651" width="0.1524" layer="21"/><wire x1="-2.254" y1="-0.254" x2="-0.286" y2="-0.254" width="0.1524" layer="51"/><wire x1="-2.655" y1="-0.254" x2="-2.254" y2="-0.254" width="0.1524" layer="21"/><wire x1="-0.286" y1="-0.254" x2="0.286" y2="-0.254" width="0.1524" layer="21"/><wire x1="2.254" y1="-0.254" x2="2.655" y2="-0.254" width="0.1524" layer="21"/><wire x1="0.286" y1="-0.254" x2="2.254" y2="-0.254" width="0.1524" layer="51"/><wire x1="-0.7864" y1="2.5484" x2="0.7864" y2="2.5484" width="0.1524" layer="51" curve="-34.298964"/><pad name="1" x="-1.27" y="0" drill="0.8128" shape="octagon"/><pad name="2" x="0" y="1.905" drill="0.8128" shape="octagon"/><pad name="3" x="1.27" y="0" drill="0.8128" shape="octagon"/><text x="2.413" y="1.651" size="1.27" layer="25" ratio="10">&gt;NAME</text><text x="2.921" y="-1.27" size="1.27" layer="27" ratio="10">&gt;VALUE</text></package>
 <package name="SENRD254W50D503H320B" urn="urn:adsk.eagle:footprint:32584211/2"><description>Radial package,  2.54 mm pitch, 5.03 mm body diameter, 3.50 mm body height
  &lt;p&gt;Radial package with 2.54 mm pitch (lead spacing), 0.50 mm lead diameter, 5.03 mm body diameter and 3.50 mm body height&lt;/p&gt;</description><pad name="1" x="-1.27" y="0" drill="0.7" diameter="1.3"/><pad name="2" x="1.27" y="0" drill="0.7" diameter="1.3"/><circle x="0" y="0" radius="2.515" width="0.12" layer="21"/><circle x="0" y="0" radius="2.515" width="0.12" layer="51"/><text x="0" y="3.15" size="1.27" layer="25" align="bottom-center">&gt;NAME</text><text x="0" y="-3.15" size="1.27" layer="27" align="top-center">&gt;VALUE</text></package>
+<package name="LEDRD254W60D565H860B" urn="urn:adsk.eagle:footprint:16378492/2"><description>Radial LED (Round), 2.54 mm pitch, 5.65 mm body diameter, 8.60 mm body height
+&lt;p&gt;Radial LED (Round) package with 2.54 mm pitch (lead spacing), 0.60 mm lead width, 0.50 mm lead thickness, 5.65 mm body diameter and 8.60 mm body height&lt;/p&gt;</description><wire x1="2.5425" y1="1.2314" x2="-2.825" y2="0" width="0.12" layer="21" curve="154.1581"/><wire x1="2.5425" y1="-1.2314" x2="-2.825" y2="0" width="0.12" layer="21" curve="-154.1581"/><wire x1="2.5425" y1="1.2314" x2="2.5425" y2="-1.2314" width="0.12" layer="21"/><wire x1="-2.5946" y1="2.5946" x2="-1.8446" y2="2.5946" width="0.12" layer="21"/><wire x1="-2.2196" y1="2.9696" x2="-2.2196" y2="2.2196" width="0.12" layer="21"/><pad name="1" x="-1.27" y="0" drill="0.981" diameter="1.581"/><pad name="2" x="1.27" y="0" drill="0.981" diameter="1.581"/><circle x="0" y="0" radius="2.825" width="0.12" layer="51"/><text x="0" y="3.6046" size="1.27" layer="25" align="bottom-center">&gt;NAME</text><text x="0" y="-3.4642" size="1.27" layer="27" align="top-center">&gt;VALUE</text></package>
+<package name="TO220V" urn="urn:adsk.eagle:footprint:16154/1"><description>&lt;b&gt;TO 200 vertical&lt;/b&gt;</description><wire x1="5.08" y1="-1.143" x2="4.953" y2="-4.064" width="0.127" layer="21"/><wire x1="4.699" y1="-4.318" x2="4.953" y2="-4.064" width="0.127" layer="21"/><wire x1="4.699" y1="-4.318" x2="-4.699" y2="-4.318" width="0.127" layer="21"/><wire x1="-4.953" y1="-4.064" x2="-4.699" y2="-4.318" width="0.127" layer="21"/><wire x1="-4.953" y1="-4.064" x2="-5.08" y2="-1.143" width="0.127" layer="21"/><circle x="-4.4958" y="-3.7084" radius="0.254" width="0.127" layer="21"/><pad name="1" x="-2.54" y="-2.54" drill="1.016" shape="long" rot="R90"/><pad name="2" x="0" y="-2.54" drill="1.016" shape="long" rot="R90"/><pad name="3" x="2.54" y="-2.54" drill="1.016" shape="long" rot="R90"/><text x="-5.08" y="-6.0452" size="1.27" layer="25" ratio="10">&gt;NAME</text><text x="-5.08" y="-7.62" size="1.27" layer="27" ratio="10">&gt;VALUE</text><text x="-3.175" y="-3.175" size="1.27" layer="51" ratio="10">1</text><text x="-0.635" y="-3.175" size="1.27" layer="51" ratio="10">2</text><text x="1.905" y="-3.175" size="1.27" layer="51" ratio="10">3</text><rectangle x1="-5.334" y1="-0.762" x2="5.334" y2="0" layer="21"/><rectangle x1="-5.334" y1="-1.27" x2="-3.429" y2="-0.762" layer="21"/><rectangle x1="-1.651" y1="-1.27" x2="-0.889" y2="-0.762" layer="21"/><rectangle x1="-3.429" y1="-1.27" x2="-1.651" y2="-0.762" layer="51"/><rectangle x1="0.889" y1="-1.27" x2="1.651" y2="-0.762" layer="21"/><rectangle x1="3.429" y1="-1.27" x2="5.334" y2="-0.762" layer="21"/><rectangle x1="-0.889" y1="-1.27" x2="0.889" y2="-0.762" layer="51"/><rectangle x1="1.651" y1="-1.27" x2="3.429" y2="-0.762" layer="51"/></package>
 </packages>
 <packages3d>
 <package3d name="ARDUINO-UNO-R3-SHIELD" urn="urn:adsk.eagle:package:32092383/4" type="model"><description>&lt;h3&gt;Arduino Uno-Compatible Footprint&lt;/h3&gt;
@@ -109,12 +110,13 @@ No holes, no ICSP connections.
 <package3d name="GL5528" urn="urn:adsk.eagle:package:31494553/2" type="model"><packageinstances><packageinstance name="GL5528"/></packageinstances></package3d>
 <package3d name="RESAD1016W63L850D250B" urn="urn:adsk.eagle:package:31513020/2" type="model"><description>Axial Resistor, 10.16 mm pitch, 8.50 mm body length, 2.50 mm body diameter
  &lt;p&gt;Axial Resistor package with 10.16 mm pitch (lead spacing), 0.63 mm lead diameter, 8.50 mm body length and 2.50 mm body diameter&lt;/p&gt;</description><packageinstances><packageinstance name="RESAD1016W63L850D250B"/></packageinstances></package3d>
-<package3d name="TO92" urn="urn:adsk.eagle:package:16378726/12" type="model"><description>&lt;b&gt;TO-92&lt;/b&gt;</description><packageinstances><packageinstance name="TO92"/></packageinstances></package3d>
 <package3d name="MOTOR" urn="urn:adsk.eagle:package:32546059/3" type="model"><packageinstances><packageinstance name="MOTOR"/></packageinstances></package3d>
-<package3d name="LEDRD254W60D565H860B" urn="urn:adsk.eagle:package:16378508/2" type="model"><description>Radial LED (Round), 2.54 mm pitch, 5.65 mm body diameter, 8.60 mm body height
-&lt;p&gt;Radial LED (Round) package with 2.54 mm pitch (lead spacing), 0.60 mm lead width, 0.50 mm lead thickness, 5.65 mm body diameter and 8.60 mm body height&lt;/p&gt;</description><packageinstances><packageinstance name="LEDRD254W60D565H860B"/></packageinstances></package3d>
+<package3d name="TO92" urn="urn:adsk.eagle:package:16378726/12" type="model"><description>&lt;b&gt;TO-92&lt;/b&gt;</description><packageinstances><packageinstance name="TO92"/></packageinstances></package3d>
 <package3d name="SENRD254W50D503H320B" urn="urn:adsk.eagle:package:32584213/2" type="model"><description>Radial package,  2.54 mm pitch, 5.03 mm body diameter, 3.50 mm body height
  &lt;p&gt;Radial package with 2.54 mm pitch (lead spacing), 0.50 mm lead diameter, 5.03 mm body diameter and 3.50 mm body height&lt;/p&gt;</description><packageinstances><packageinstance name="SENRD254W50D503H320B"/></packageinstances></package3d>
+<package3d name="LEDRD254W60D565H860B" urn="urn:adsk.eagle:package:16378508/2" type="model"><description>Radial LED (Round), 2.54 mm pitch, 5.65 mm body diameter, 8.60 mm body height
+&lt;p&gt;Radial LED (Round) package with 2.54 mm pitch (lead spacing), 0.60 mm lead width, 0.50 mm lead thickness, 5.65 mm body diameter and 8.60 mm body height&lt;/p&gt;</description><packageinstances><packageinstance name="LEDRD254W60D565H860B"/></packageinstances></package3d>
+<package3d name="TO220V" urn="urn:adsk.eagle:package:16417/2" type="model"><description>TO 200 vertical</description><packageinstances><packageinstance name="TO220V"/></packageinstances></package3d>
 </packages3d>
 </library></libraries>
 <attributes/>
@@ -308,27 +310,11 @@ design rules under a new name.
 <elements>
 <element name="RDIVISOR_DE_TENSÃO" library="Tinkercad" library_urn="urn:adsk.eagle:library:30890021" package="RESAD1016W63L850D250B" package3d_urn="urn:adsk.eagle:package:31513020/2" value="10k" x="6.33" y="58.3628" rot="R-90" smashed="yes"/>
 <element name="RSENSOR_UV_ML8511" library="Tinkercad" library_urn="urn:adsk.eagle:library:30890021" package="GL5528" package3d_urn="urn:adsk.eagle:package:31494553/2" value="PHOTOCELL_GL5528" x="12.9345" y="67.6116" smashed="yes"/>
-<element name="MMÓDULO_SIMULADOR_DE_VIBRAÇÃO" library="Tinkercad" library_urn="urn:adsk.eagle:library:30890021" package="MOTOR" package3d_urn="urn:adsk.eagle:package:32546059/3" value="MOTOR_HDR" x="30.6527" y="117.4252" rot="R-270" smashed="yes"/>
-<element name="TINTERRUPTOR_ELETRÔNICO" library="Tinkercad" library_urn="urn:adsk.eagle:library:30890021" package="TO92" package3d_urn="urn:adsk.eagle:package:16378726/12" value="NPN" x="30.4075" y="96.8465" rot="R-90" smashed="yes">
-<attribute name="CATEGORY" value="Transistor" x="30.4075" y="96.8465" size="1.778" layer="27" display="off"/>
-<attribute name="DESCRIPTION" value="" x="30.4075" y="96.8465" size="1.778" layer="27" display="off"/>
-<attribute name="IC_MAX" value="" x="30.4075" y="96.8465" size="1.778" layer="27" display="off"/>
-<attribute name="MANUFACTURER" value="" x="30.4075" y="96.8465" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="" x="30.4075" y="96.8465" size="1.778" layer="27" display="off"/>
-<attribute name="OPERATING_TEMP" value="" x="30.4075" y="96.8465" size="1.778" layer="27" display="off"/>
-<attribute name="PART_STATUS" value="" x="30.4075" y="96.8465" size="1.778" layer="27" display="off"/>
-<attribute name="ROHS_COMPLIANT" value="" x="30.4075" y="96.8465" size="1.778" layer="27" display="off"/>
-<attribute name="SERIES" value="" x="30.4075" y="96.8465" size="1.778" layer="27" display="off"/>
-<attribute name="SUB-CATEGORY" value="BJT" x="30.4075" y="96.8465" size="1.778" layer="27" display="off"/>
-<attribute name="THERMALLOSS" value="" x="30.4075" y="96.8465" size="1.778" layer="27" display="off"/>
-<attribute name="TYPE" value="NPN" x="30.4075" y="96.8465" size="1.778" layer="27" display="off"/>
-<attribute name="VALUE" value="NPN" x="30.4075" y="96.8465" size="1.778" layer="27" display="off"/>
-<attribute name="VCEO_MAX" value="" x="30.4075" y="96.8465" size="1.778" layer="27" display="off"/>
-</element>
-<element name="RBASE_DO_INTERRUPTOR_(TRANSISTOR_NPN)" library="Tinkercad" library_urn="urn:adsk.eagle:library:30890021" package="RESAD1016W63L850D250B" package3d_urn="urn:adsk.eagle:package:31513020/2" value="220" x="130.7976" y="32.669" rot="R90" smashed="yes"/>
-<element name="ULILYPAD_VIRTUAL" library="Tinkercad" library_urn="urn:adsk.eagle:library:30890021" package="ARDUINO-UNO-R3-SHIELD" package3d_urn="urn:adsk.eagle:package:32092383/4" value="ARDUINO-UNO-R3-SHIELD" x="86.3762" y="55.9853" rot="R180" smashed="yes"/>
 <element name="UTEMPERATURA_DO_SENSOR_BME280" library="Tinkercad" library_urn="urn:adsk.eagle:library:30890021" package="TO92" package3d_urn="urn:adsk.eagle:package:16378726/12" value="TMP36GT9Z_TO92" x="157.6732" y="46.2901" smashed="yes"/>
 <element name="RRESISTOR_ÂNODO_LED" library="Tinkercad" library_urn="urn:adsk.eagle:library:30890021" package="RESAD1016W63L850D250B" package3d_urn="urn:adsk.eagle:package:31513020/2" value="220" x="152.6202" y="72.3427" rot="R-90" smashed="yes"/>
+<element name="ULILYPAD_VIRTUAL" library="Tinkercad" library_urn="urn:adsk.eagle:library:30890021" package="ARDUINO-UNO-R3-SHIELD" package3d_urn="urn:adsk.eagle:package:32092383/4" value="ARDUINO-UNO-R3-SHIELD" x="86.3762" y="55.9853" rot="R180" smashed="yes"/>
+<element name="RRESISTOR_PULL-UP" library="Tinkercad" library_urn="urn:adsk.eagle:library:30890021" package="RESAD1016W63L850D250B" package3d_urn="urn:adsk.eagle:package:31513020/2" value="10k" x="185.5217" y="6.33" smashed="yes"/>
+<element name="QLEITURA_UV_VIA_SENSOR_BME280)" library="Tinkercad" library_urn="urn:adsk.eagle:library:30890021" package="SENRD254W50D503H320B" package3d_urn="urn:adsk.eagle:package:32584213/2" value="PHOTOTRANSISTOR" x="190.4135" y="93.6114" rot="R360" smashed="yes"/>
 <element name="DLED_ARDUINO_LILYPAD_-_ALERTAR_PERIGO" library="Tinkercad" library_urn="urn:adsk.eagle:library:30890021" package="LEDRD254W60D565H860B" package3d_urn="urn:adsk.eagle:package:16378508/2" value="RED" x="150.5737" y="79.4711" rot="R180" smashed="yes">
 <attribute name="CATEGORY" value="Opto-Electronic" x="150.5737" y="79.4711" size="1.778" layer="27" display="off"/>
 <attribute name="COLOR" value="" x="150.5737" y="79.4711" size="1.778" layer="27" display="off"/>
@@ -345,8 +331,9 @@ design rules under a new name.
 <attribute name="VALUE" value="LED_RED" x="150.5737" y="79.4711" size="1.778" layer="27" display="off"/>
 </element>
 <element name="RRESISTOR_CATÓDICO_LED" library="Tinkercad" library_urn="urn:adsk.eagle:library:30890021" package="RESAD1016W63L850D250B" package3d_urn="urn:adsk.eagle:package:31513020/2" value="220" x="149.3014" y="72.4272" rot="R90" smashed="yes"/>
-<element name="RRESISTOR_PULL-UP" library="Tinkercad" library_urn="urn:adsk.eagle:library:30890021" package="RESAD1016W63L850D250B" package3d_urn="urn:adsk.eagle:package:31513020/2" value="10k" x="185.5217" y="6.33" smashed="yes"/>
-<element name="QLEITURA_UV_VIA_SENSOR_BME280)" library="Tinkercad" library_urn="urn:adsk.eagle:library:30890021" package="SENRD254W50D503H320B" package3d_urn="urn:adsk.eagle:package:32584213/2" value="PHOTOTRANSISTOR" x="190.4135" y="93.6114" rot="R360" smashed="yes"/>
+<element name="RBASE_DO_INTERRUPTOR_(TRANSISTOR_NPN)" library="Tinkercad" library_urn="urn:adsk.eagle:library:30890021" package="RESAD1016W63L850D250B" package3d_urn="urn:adsk.eagle:package:31513020/2" value="220" x="130.7976" y="32.669" rot="R90" smashed="yes"/>
+<element name="QINTERRUPTOR_ELETRÔNICO" library="Tinkercad" library_urn="urn:adsk.eagle:library:30890021" package="TO220V" package3d_urn="urn:adsk.eagle:package:16417/2" value="TIP120_TO220-V" x="28.5824" y="86.1267" rot="R-90" smashed="yes"/>
+<element name="MMÓDULO_SIMULADOR_DE_VIBRAÇÃO" library="Tinkercad" library_urn="urn:adsk.eagle:library:30890021" package="MOTOR" package3d_urn="urn:adsk.eagle:package:32546059/3" value="MOTOR_HDR" x="30.6527" y="117.4252" rot="R-270" smashed="yes"/>
 </elements>
 <signals>
 <signal name="ULILYPAD_VIRTUAL_A0">
@@ -361,17 +348,17 @@ design rules under a new name.
 <contactref element="ULILYPAD_VIRTUAL" pad="GND@0"/>
 <contactref element="ULILYPAD_VIRTUAL" pad="GND@1"/>
 <contactref element="ULILYPAD_VIRTUAL" pad="GND@2"/>
-<contactref element="TINTERRUPTOR_ELETRÔNICO" pad="3"/>
 <contactref element="RRESISTOR_CATÓDICO_LED" pad="1"/>
 <contactref element="UTEMPERATURA_DO_SENSOR_BME280" pad="1"/>
 <contactref element="QLEITURA_UV_VIA_SENSOR_BME280)" pad="1"/>
+<contactref element="QINTERRUPTOR_ELETRÔNICO" pad="3"/>
 <wire x1="62.2462" y1="53.4453" x2="62.2462" y2="50.9053" width="0" layer="19" extent="1-1"/>
+<wire x1="62.2462" y1="53.4453" x2="26.0424" y2="83.5867" width="0" layer="19" extent="1-1"/>
+<wire x1="6.33" y1="53.2828" x2="26.0424" y2="83.5867" width="0" layer="19" extent="1-1"/>
 <wire x1="62.2462" y1="53.4453" x2="110.5062" y2="67.4153" width="0" layer="19" extent="1-1"/>
 <wire x1="110.5062" y1="67.4153" x2="149.3014" y2="67.3472" width="0" layer="19" extent="1-1"/>
 <wire x1="149.3014" y1="67.3472" x2="156.4032" y2="46.2901" width="0" layer="19" extent="1-1"/>
 <wire x1="149.3014" y1="67.3472" x2="189.1435" y2="93.6114" width="0" layer="19" extent="1-1"/>
-<wire x1="62.2462" y1="53.4453" x2="30.4075" y2="95.5765" width="0" layer="19" extent="1-1"/>
-<wire x1="6.33" y1="53.2828" x2="30.4075" y2="95.5765" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="ULILYPAD_VIRTUAL_5V">
 <contactref element="RSENSOR_UV_ML8511" pad="1"/>
@@ -379,31 +366,6 @@ design rules under a new name.
 <contactref element="MMÓDULO_SIMULADOR_DE_VIBRAÇÃO" pad="+"/>
 <wire x1="11.2327" y1="67.6116" x2="62.2462" y2="55.9853" width="0" layer="19" extent="1-1"/>
 <wire x1="11.2327" y1="67.6116" x2="30.6527" y2="119.9652" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="MMÓDULO_SIMULADOR_DE_VIBRAÇÃO_-">
-<contactref element="TINTERRUPTOR_ELETRÔNICO" pad="1"/>
-<contactref element="MMÓDULO_SIMULADOR_DE_VIBRAÇÃO" pad="-"/>
-<wire x1="30.4075" y1="98.1165" x2="30.6527" y2="114.8852" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="TINTERRUPTOR_ELETRÔNICO_B">
-<contactref element="RBASE_DO_INTERRUPTOR_(TRANSISTOR_NPN)" pad="1"/>
-<contactref element="TINTERRUPTOR_ELETRÔNICO" pad="2"/>
-<wire x1="130.7976" y1="27.589" x2="32.3125" y2="96.8465" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="ULILYPAD_VIRTUAL_D3">
-<contactref element="RBASE_DO_INTERRUPTOR_(TRANSISTOR_NPN)" pad="2"/>
-<contactref element="ULILYPAD_VIRTUAL" pad="D3"/>
-<wire x1="130.7976" y1="37.749" x2="110.5062" y2="38.2053" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="ULILYPAD_VIRTUAL_D13">
-<contactref element="RRESISTOR_ÂNODO_LED" pad="2"/>
-<contactref element="ULILYPAD_VIRTUAL" pad="D13"/>
-<wire x1="152.6202" y1="67.2627" x2="110.5062" y2="64.8753" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="ULILYPAD_VIRTUAL_A2">
-<contactref element="RRESISTOR_PULL-UP" pad="1"/>
-<contactref element="ULILYPAD_VIRTUAL" pad="A2"/>
-<wire x1="180.4417" y1="6.33" x2="62.2462" y2="38.2053" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="ULILYPAD_VIRTUAL_A1">
 <contactref element="ULILYPAD_VIRTUAL" pad="A1"/>
@@ -416,19 +378,44 @@ design rules under a new name.
 <wire x1="110.5062" y1="43.2853" x2="158.9432" y2="46.2901" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="DLED_ARDUINO_LILYPAD_-_ALERTAR_PERIGO_A">
-<contactref element="DLED_ARDUINO_LILYPAD_-_ALERTAR_PERIGO" pad="1"/>
 <contactref element="RRESISTOR_ÂNODO_LED" pad="1"/>
-<wire x1="151.8437" y1="79.4711" x2="152.6202" y2="77.4227" width="0" layer="19" extent="1-1"/>
+<contactref element="DLED_ARDUINO_LILYPAD_-_ALERTAR_PERIGO" pad="1"/>
+<wire x1="152.6202" y1="77.4227" x2="151.8437" y2="79.4711" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="DLED_ARDUINO_LILYPAD_-_ALERTAR_PERIGO_C">
-<contactref element="RRESISTOR_CATÓDICO_LED" pad="2"/>
-<contactref element="DLED_ARDUINO_LILYPAD_-_ALERTAR_PERIGO" pad="2"/>
-<wire x1="149.3014" y1="77.5072" x2="149.3037" y2="79.4711" width="0" layer="19" extent="1-1"/>
+<signal name="ULILYPAD_VIRTUAL_D13">
+<contactref element="RRESISTOR_ÂNODO_LED" pad="2"/>
+<contactref element="ULILYPAD_VIRTUAL" pad="D13"/>
+<wire x1="152.6202" y1="67.2627" x2="110.5062" y2="64.8753" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="ULILYPAD_VIRTUAL_A2">
+<contactref element="RRESISTOR_PULL-UP" pad="1"/>
+<contactref element="ULILYPAD_VIRTUAL" pad="A2"/>
+<wire x1="180.4417" y1="6.33" x2="62.2462" y2="38.2053" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="ULILYPAD_VIRTUAL_D3">
+<contactref element="RBASE_DO_INTERRUPTOR_(TRANSISTOR_NPN)" pad="2"/>
+<contactref element="ULILYPAD_VIRTUAL" pad="D3"/>
+<wire x1="130.7976" y1="37.749" x2="110.5062" y2="38.2053" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="QLEITURA_UV_VIA_SENSOR_BME280)_C">
 <contactref element="QLEITURA_UV_VIA_SENSOR_BME280)" pad="2"/>
 <contactref element="RRESISTOR_PULL-UP" pad="2"/>
 <wire x1="191.6835" y1="93.6114" x2="190.6017" y2="6.33" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="DLED_ARDUINO_LILYPAD_-_ALERTAR_PERIGO_C">
+<contactref element="DLED_ARDUINO_LILYPAD_-_ALERTAR_PERIGO" pad="2"/>
+<contactref element="RRESISTOR_CATÓDICO_LED" pad="2"/>
+<wire x1="149.3037" y1="79.4711" x2="149.3014" y2="77.5072" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="QINTERRUPTOR_ELETRÔNICO_B">
+<contactref element="QINTERRUPTOR_ELETRÔNICO" pad="1"/>
+<contactref element="RBASE_DO_INTERRUPTOR_(TRANSISTOR_NPN)" pad="1"/>
+<wire x1="26.0424" y1="88.6667" x2="130.7976" y2="27.589" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="MMÓDULO_SIMULADOR_DE_VIBRAÇÃO_-">
+<contactref element="MMÓDULO_SIMULADOR_DE_VIBRAÇÃO" pad="-"/>
+<contactref element="QINTERRUPTOR_ELETRÔNICO" pad="2"/>
+<wire x1="30.6527" y1="114.8852" x2="26.0424" y2="86.1267" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 </board>

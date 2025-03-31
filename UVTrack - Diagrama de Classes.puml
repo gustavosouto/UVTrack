@@ -1,0 +1,43 @@
+@startuml
+
+' Definição das classes principais
+class SensorAmbiental {
+  +capturarDados(): String
+}
+
+class Processador {
+  +processarDados(dados: String): String
+}
+
+class Alerta {
+  +gerarAlerta(dadosProcessados: String): void
+}
+
+class Comunicador {
+  +enviarDados(mensagem: String): void
+}
+
+class Bluetooth {
+  +enviarViaBluetooth(mensagem: String): void
+}
+
+class MonitorSerial {
+  +enviarViaSerial(mensagem: String): void
+}
+
+class Alimentacao {
+  +fornecerEnergia(): void
+}
+
+' Relacionamentos entre as classes
+Processador --> SensorAmbiental : "Depende de"
+Alerta --> Processador : "Recebe dados"
+Comunicador ..|> Bluetooth
+Comunicador ..|> MonitorSerial
+Comunicador --> Alerta : "Envia alerta"
+SensorAmbiental --> Alimentacao : "Requer energia"
+Processador --> Alimentacao : "Requer energia"
+Alerta --> Alimentacao : "Requer energia"
+Comunicador --> Alimentacao : "Requer energia"
+
+@enduml
