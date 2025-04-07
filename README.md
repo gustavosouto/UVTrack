@@ -82,8 +82,7 @@ A simulação foi realizada na plataforma Tinkercad, onde os componentes foram i
 ## 🎬 Demonstração
 
 🔗 Link para vídeo da execução do projeto físico:  
-**[Clique aqui para assistir no YouTube](https://www.youtube.com/)**  
-*(Atualize com o link oficial assim que disponível)*
+**[Clique aqui para assistir no YouTube](https://www.youtube.com/)** 
 
 ---
 
