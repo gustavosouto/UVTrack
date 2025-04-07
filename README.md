@@ -108,5 +108,5 @@ A simulação foi realizada na plataforma Tinkercad, onde os componentes foram i
 | **Luiz Felipe Silva**                   | [@LuizFelipee96](https://github.com/LuizFelipee96)                  | Responsável pela arquitetura do sistema, integração de hardware e supervisão técnica. Atua como **Coordenador Técnico** e **Arquiteto de Sistemas**.                                       |
 | **Nicolas Sá Simões**                   | [@NicolasSasi](https://github.com/NicolasSasi)                      | Responsável pelo design físico e interface do produto com o usuário. Atua como **Designer de Produto** e **Engenheiro de Interface**.                                                     |
 
-## 👥 Contribuições
+## 🤝 Contribuições
 Contribuições são bem-vindas! Sinta-se à vontade para propor melhorias, corrigir problemas ou adicionar novos recursos ao projeto.
