@@ -4,15 +4,15 @@
 #include <Ticker.h>
 #include <AsyncMqttClient.h>
 
-#define WIFI_SSID "REPLACE_WITH_YOUR_SSID"
-#define WIFI_PASSWORD "REPLACE_WITH_YOUR_PASSWORD"
+#define WIFI_SSID "brisa-3357106"
+#define WIFI_PASSWORD "iwcroyx9"
 
-#define MQTT_HOST IPAddress(192,168,78,246) //MQTT BROKER IP ADDRESS
+#define MQTT_HOST IPAddress(24,144,93,211) //MQTT BROKER IP ADDRESS
 //for example:
 
 #define MQTT_PORT 1883
-#define BROKER_USER "REPLACE_WITH_BROKER_USERNAME"
-#define BROKER_PASS "REPLACE_WITH_BROKER_PASSWORD"
+#define BROKER_USER ""
+#define BROKER_PASS ""
 
 AsyncMqttClient mqttClient;
 Ticker mqttReconnectTimer;
@@ -110,6 +110,8 @@ void onMqttPublish(uint16_t packetId) {
   Serial.println("Publish acknowledged.");
   Serial.print("  packetId: ");
   Serial.println(packetId);
+  Serial.println("-------------------------------");
+  Serial.println("");
 }
 
 void setup() {
@@ -137,6 +139,12 @@ void loop() {
   // Estimação simples do índice UV (ajuste conforme seu sensor real)
   float indiceUV = tensao * 10.0;
 
+  String classificacao;
+  if      (indiceUV <= 2.0) classificacao = "Baixo";
+  else if (indiceUV <= 5.0) classificacao = "Moderado";
+  else if (indiceUV <= 7.0) classificacao = "Alto";
+  else                      classificacao = "Muito Alto";
+
   Serial.print("Leitura: ");
   Serial.print(leitura);
   Serial.print("\tTensão: ");
@@ -144,9 +152,14 @@ void loop() {
   Serial.print(" V\tÍndice UV: ");
   Serial.println(indiceUV);
 
-  // Publish an MQTT message on uv/sensor counter
-  uint16_t packetIdPub1 = mqttClient.publish("uv/sensor", 1, true, String(indiceUV).c_str());
-  Serial.printf("Publishing on topic %s at QoS 1, packetId: %i", "counter", packetIdPub1);
+  String payload = "{";
+  payload += "\"nivel_uv\":" + String(indiceUV, 1) + ",";
+  payload += "\"classificacao\":\"" + classificacao + "\"";
+  payload += "}";
+
+  // Publish an MQTT message on uv/sensor
+  uint16_t packetIdPub1 = mqttClient.publish("uv/sensor", 1, true, payload.c_str());
+  Serial.printf("Publishing on topic %s at QoS 1, packetId: %i", "uv/sensor", packetIdPub1);
 
   delay(4500); // Aguarda 4,5 segundos
 }
