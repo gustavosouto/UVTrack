@@ -1,111 +1,97 @@
-# UVTrack – Sistema de Monitoramento de Radiação UV
+# UVTrack – Sistema Inteligente para Monitoramento de Exposição Solar
 
-## 📌 Descrição do Projeto
+Este repositório contém os artefatos relacionados ao desenvolvimento do **UVTrack**, um dispositivo vestível inteligente, acoplado a um boné, projetado para monitorar a exposição do usuário à radiação ultravioleta (UV) em tempo real e fornecer alertas preventivos.
 
-O presente projeto consiste no desenvolvimento de um boné dotado de sensores capazes de realizar o monitoramento contínuo da exposição à radiação ultravioleta (UV), onde o objetivo é fornecer alertas ao usuários – através de sinais vibratórios e visuais – quando os níveis de radiação luminosa ou temperatura estiverem acima dos limites seguros de modo a prevenir riscos à saúde humana decorrente da superexposição solar. A finalidade do projeto é incentivar práticas preventivas de saúde, onde seu uso será voltado para atividades ao ar livre, esporte ou como EPI para trabalhadores expostos ao sol.
+## 🎯 Objetivo
 
----
+O objetivo principal do UVTrack é mitigar os riscos à saúde associados à superexposição solar, como queimaduras e o desenvolvimento de doenças de pele. O sistema alerta o usuário através de sinais vibratórios quando os níveis de radiação UV atingem patamares considerados inseguros, incentivando práticas preventivas durante atividades ao ar livre, esportes ou como Equipamento de Proteção Individual (EPI) para trabalhadores expostos ao sol.
 
-## ⚙️ Funcionamento do Sistema
+## ⚙️ Arquitetura e Funcionamento do Sistema
 
-O boné inteligente desenvolvido visa monitorar em tempo real as condições ambientais relacionadas à exposição solar, fornecendo alertas imediatos ao usuário sobre níveis elevados de radiação e temperatura. O funcionamento do dispositivo baseia-se em três etapas integradas: coleta de dados, processamento e emissão de alertas. 
+O UVTrack opera com base em uma arquitetura IoT integrada, compreendendo um dispositivo vestível (hardware embarcado) e uma plataforma de software para coleta e visualização de dados.
 
-A coleta dos dados ambientais ocorre através de dois sensores principais. A intensidade da radiação ultravioleta é simulada por um fotoresistor LDR (Substituindo Sensor UV), devidamente conectado à porta analógica A0 do Arduino Uno R3 (Substituindo Arduino Lilypad). Este sensor atua medindo a luminosidade do ambiente, servindo como referência para estimar a exposição à radiação solar. Em complemento, a temperatura do ambiente é monitorada por um sensor TMP36, conectado à porta analógica A1, que fornece leituras precisas de temperatura, substituindo, para fins de simulação, o sensor BME280, que originalmente seria utilizado.
+1.  **Coleta de Dados:** O sensor UV **GUVA-S12SD**, acoplado ao boné, mede continuamente a intensidade da radiação UV ambiente.
+2.  **Processamento Embarcado:** O microcontrolador **ESP8266 NodeMCU** lê os dados do sensor, calcula o Índice UV correspondente e compara com limiares pré-definidos.
+3.  **Alerta Local:** Caso um limiar de segurança seja ultrapassado, o ESP8266 ativa um **módulo de vibração** para notificar o usuário tátilmente.
+4.  **Comunicação:** Os dados processados (Índice UV, classificação de risco) são formatados em **JSON** e transmitidos via **Wi-Fi** utilizando o protocolo **MQTT** para um broker central.
+5.  **Processamento Backend:** Um serviço desenvolvido em **Go (Golang)** recebe as mensagens MQTT, valida os dados e os persiste em um banco de dados de séries temporais **InfluxDB**.
+6.  **Visualização:** Uma plataforma **Grafana** conectada ao InfluxDB permite ao usuário visualizar o histórico de exposição UV e outras métricas relevantes através de dashboards web interativos.
 
-Após a coleta, os dados são processados pelo microcontrolador Arduino Uno R3, que analisa os valores de luminosidade e temperatura. Quando algum dos parâmetros ultrapassa o limite seguro previamente estabelecido no código do sistema, são acionados os mecanismos de alerta. A comunicação desses dados ao usuário, que no projeto físico ocorreria via Bluetooth HC-05, é simulada no Tinkercad por meio do Serial Monitor, permitindo visualizar em tempo real os valores medidos e os estados de alerta.
+*(Para uma visão detalhada da arquitetura, consulte o Diagrama de Arquitetura na documentação do projeto.)*
 
-O sistema de alerta é composto por dois elementos. O alerta visual é realizado através de um LED comum, que substitui o LED LilyPad, e está conectado ao pino digital D13 do Arduino Uno R3. Esse LED é protegido por um resistor de 220 ohms, que limita a corrente elétrica, preservando a integridade do componente. Já o alerta tátil é viabilizado por um motor CC, que substitui o módulo de vibração. Este motor é controlado por um transistor NPN TIP120, cuja base está conectada ao pino digital D3 do Arduino por meio de um resistor de 1k ohm, garantindo o acionamento seguro do motor sem sobrecarregar a placa controladora.
+## 🛠️ Hardware
 
-A utilização destes componentes substitutos foi necessária devido às limitações da plataforma Tinkercad, que não possui suporte direto para sensores UV ou comunicação Bluetooth. A adaptação com o fotoresistor, TMP36 e Serial Monitor assegura a fidelidade da simulação ao funcionamento real do projeto, permitindo validar sua lógica e resposta em tempo real às condições simuladas de exposição solar. Este dispositivo, portanto, integra tecnologia acessível e programação embarcada com o objetivo de prevenir riscos à saúde em situações de exposição prolongada ao sol, fornecendo dados e alertas que capacitam o usuário a tomar decisões informadas sobre sua segurança.
+Os principais componentes eletrônicos do dispositivo vestível incluem:
 
----
+*   **Microcontrolador:** ESP8266 NodeMCU (com Wi-Fi integrado)
+*   **Sensor UV:** GUVA-S12SD
+*   **Atuador:** Módulo de Vibração
+*   **Alimentação:** Bateria LiPo 3.7V com Módulo Carregador (ex: TP4056)
+
+*(Consulte o arquivo `UVTrack - Código.brd` - se disponível e atualizado - ou os diagramas na documentação para detalhes do circuito.)*
+
+## 👨‍💻 Firmware
+
+O firmware embarcado no ESP8266 é desenvolvido em C++ (utilizando o framework Arduino) e é responsável por:
+
+*   Inicializar hardware e conexões (Wi-Fi, MQTT).
+*   Realizar leituras periódicas do sensor GUVA-S12SD.
+*   Calcular o Índice UV.
+*   Comparar o Índice UV com os limiares e ativar o módulo de vibração.
+*   Formatar os dados em JSON.
+*   Publicar os dados via MQTT.
+*   Gerenciar o consumo de energia (ex: modos de sleep).
+
+O código-fonte principal do firmware pode ser encontrado em `UVTrack - Código Arduino.ino`.
+
+## ☁️ Plataforma de Software (Backend e Visualização)
+
+A plataforma de software, responsável pela coleta, armazenamento e visualização dos dados, é composta por:
+
+*   **Broker MQTT:** (Ex: Mosquitto) - Recebe os dados do dispositivo.
+*   **Serviço de Ingestão:** Aplicação em Go - Processa e armazena os dados.
+*   **Banco de Dados:** InfluxDB - Armazena as séries temporais de dados UV.
+*   **Plataforma de Dashboard:** Grafana - Visualiza os dados.
+
+*(O código e a configuração desta plataforma podem estar localizados no repositório complementar `gustavosouto/sensoruv`.)*
 
 ## 📋 Tecnologias Utilizadas
 
-| Tecnologia     | Aplicação                                               |
-|----------------|----------------------------------------------------------|
-| Arduino IDE    | Programação e upload do código para o microcontrolador. |
-| Tinkercad      | Simulação do circuito e testes de funcionalidade.       |
-| GitHub         | Versionamento e colaboração no projeto.                 |
+*   **Hardware:** ESP8266, GUVA-S12SD, Módulo de Vibração, LiPo.
+*   **Firmware:** C++, Arduino Framework.
+*   **Comunicação:** Wi-Fi, MQTT, JSON.
+*   **Backend:** Go (Golang).
+*   **Banco de Dados:** InfluxDB.
+*   **Visualização:** Grafana.
+*   **Controle de Versão:** Git, GitHub.
+*   **(Opcional) Orquestração:** Docker, Docker Compose (para a plataforma backend).
 
----
+## 🚀 Uso e Configuração
 
-## 🔌 Componentes Originais
+*(Esta seção deve ser detalhada com instruções sobre como compilar e carregar o firmware no ESP8266, configurar as credenciais de Wi-Fi e MQTT, e como acessar a plataforma Grafana, se aplicável.)*
 
-| Componente                 | Modelo               | Finalidade no Sistema                                                                 |
-|----------------------------|----------------------|----------------------------------------------------------------------------------------|
-| Microcontrolador           | Arduino LilyPad      | Controlar os sensores e atuadores com foco em aplicações vestíveis.                   |
-| Sensor de temperatura/umidade | BME280           | Medição precisa da temperatura e umidade do ambiente.                                 |
-| Sensor de radiação         | Sensor UV            | Captura a intensidade da radiação ultravioleta.                                       |
-| Módulo de comunicação      | Módulo Bluetooth HC-05 | Transmissão dos dados via Bluetooth ao usuário.                                      |
-| LED indicador              | LED LilyPad          | Alerta visual ao usuário em caso de radiação ou temperatura elevada.                  |
-| Alerta tátil               | Módulo de vibração   | Geração de feedback tátil quando limites são excedidos.                               |
+1.  **Configurar Credenciais:** Atualize as definições de `WIFI_SSID`, `WIFI_PASSWORD`, `MQTT_HOST`, `MQTT_PORT`, `BROKER_USER`, `BROKER_PASS` no arquivo `UVTrack - Código Arduino.ino`.
+2.  **Compilar e Carregar:** Utilize a Arduino IDE ou PlatformIO para compilar o firmware e carregá-lo no módulo ESP8266 NodeMCU.
+3.  **Alimentação:** Conecte a bateria LiPo carregada.
+4.  **Monitoramento:** O dispositivo iniciará a leitura do sensor e a publicação dos dados via MQTT. Alertas vibratórios serão acionados conforme os limiares.
+5.  **Visualização:** Acesse o dashboard configurado no Grafana para visualizar os dados históricos e em tempo real (consulte a documentação do backend para o endereço do Grafana).
 
----
+## 📄 Documentação
 
-## 💡 Componentes Utilizados na Simulação
-
-| Componente                 | Modelo               | Justificativa de Uso na Simulação                                                     |
-|----------------------------|----------------------|----------------------------------------------------------------------------------------|
-| Microcontrolador           | Arduino Uno R3       | Disponível no Tinkercad, funcionalmente equivalente ao LilyPad.                       |
-| Sensor de temperatura      | TMP36                | Sensor analógico simples e compatível com o ambiente simulado.                        |
-| Sensor de luminosidade     | LDR (Fotoresistor)   | Simula a radiação solar ao medir a luminosidade.                                      |
-| Módulo de comunicação      | Monitor Serial       | Substitui o Bluetooth para fins de visualização na simulação.                         |
-| LED indicador              | LED Comum            | Simula o alerta visual original com mesma lógica de acionamento.                      |
-| Alerta tátil               | Motor CC             | Reproduz o alerta tátil por vibração.                                                 |
-| Transistor                 | TIP120               | Necessário para controlar o motor sem sobrecarregar o microcontrolador.               |
-| Resistores                 | 220Ω, 1kΩ            | Usados para limitar corrente nos atuadores (LED e base do transistor).                |
-
----
-
-## 🔁 Tabela de Equivalência
-
-| Componente Original     | Componente Substituto | Justificativa                                           |
-|--------------------------|------------------------|----------------------------------------------------------|
-| Arduino LilyPad          | Arduino Uno R3         | Disponível no Tinkercad com funcionamento compatível.    |
-| Sensor BME280            | Sensor TMP36           | Sensor analógico simples com leitura de temperatura.     |
-| Sensor de radiação UV    | LDR (Fotoresistor)     | Simula a intensidade da luz solar.                       |
-| LED LilyPad              | LED Comum              | Possui a mesma funcionalidade de alerta visual.          |
-| Módulo de vibração       | Motor CC               | Reproduz o alerta tátil por vibração.                    |
-| Módulo Bluetooth HC-05   | Serial Monitor         | Utilizado como substituto para transmissão de dados.     |
-
----
-
-## 🧪 Simulação Tinkercad
-
-A simulação foi realizada na plataforma Tinkercad, onde os componentes foram integrados e testados quanto à lógica de funcionamento e emissão de alertas.
-
-🔗 Link para simulação: [Acesse o projeto no Tinkercad]([https://www.tinkercad.com](https://www.tinkercad.com/things/cwpPFPqJfvZ-uvtrack/editel?returnTo=https%3A%2F%2Fwww.tinkercad.com%2Fdashboard&sharecode=IRnn-mejee00jDnhUTVhbiRiY1knzX_Q1l7WBOqrC2Q))
-
----
-
-## 🎬 Demonstração
-
-🔗 Link para vídeo da execução do projeto físico:  
-**[Clique aqui para assistir no YouTube](https://www.youtube.com/)** 
-
----
-
-## 📂 Links Úteis
-
-| Componente         | Datasheet/Especificação Técnica                                      |
-|--------------------|---------------------------------------------------------------------------|
-| TMP36              | [Datasheet TMP36](https://www.analog.com/media/en/technical-documentation/data-sheets/TMP35_36_37.pdf) |
-| LDR                | [Datasheet LDR](https://cdn.sparkfun.com/datasheets/Sensors/Light/SEN-09088.pdf) |
-| Motor CC           | [Datasheet Motor Genérico](https://www.electroschematics.com/wp-content/uploads/2021/07/DC-Motor-Datasheet.pdf) |
-| Transistor TIP120  | [Datasheet TIP120](https://www.onsemi.com/pdf/datasheet/tip120-d.pdf) |
-| Resistor           | [Tabela de Códigos de Cores](https://www.digikey.com/en/resources/conversion-calculators/conversion-calculator-resistor-color-code) |
-
----
+*   **Documento Principal:** `UVTrack - Projeto Integrador 6.pdf` (Contém detalhes sobre escopo, arquitetura, design, cronograma e orçamento).
+*   **Diagramas:** Arquivos `.puml` ou imagens geradas (Casos de Uso, Classes, Arquitetura, Sequência) podem estar na pasta `Documentos` ou similar.
 
 ## 👥 Equipe de Desenvolvimento
 
-| Nome Completo                            | GitHub                                                              | Responsabilidade Técnica                                                                                                                                                                   |
-|-----------------------------------------|---------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Gustavo Souto Silva de Barros Santos**| [@GustavoSouto](https://github.com/GustavoSouto)                    | Responsável pela elicitação, modelagem e rastreabilidade dos RFs e RNFs, bem como pela documentação técnica. Atua como **Analista de Requisitos** e **Product Owner (PO)**.               |
-| **João Lucas Camilo**                   | [@joaolucascamilo](https://github.com/joaolucascamilo)              | Responsável pela programação embarcada, testes funcionais e calibração do sistema. Atua como **Engenheiro de Firmware** e **Engenheiro de Testes**.                                       |
-| **Luiz Felipe Silva**                   | [@LuizFelipee96](https://github.com/LuizFelipee96)                  | Responsável pela arquitetura do sistema, integração de hardware e supervisão técnica. Atua como **Coordenador Técnico** e **Arquiteto de Sistemas**.                                       |
-| **Nicolas Sá Simões**                   | [@NicolasSasi](https://github.com/NicolasSasi)                      | Responsável pelo design físico e interface do produto com o usuário. Atua como **Designer de Produto** e **Engenheiro de Interface**.                                                     |
+| Nome Completo                       | GitHub                                   | Responsabilidade Técnica                                    |
+| :---------------------------------- | :--------------------------------------- | :---------------------------------------------------------- |
+| Gustavo Souto Silva de Barros Santos| [@GustavoSouto](https://github.com/GustavoSouto) | Analista de Requisitos, Documentação Técnica, Montagem Física, Líder |
+| João Lucas Camilo                   | [@joaolucascamilo](https://github.com/joaolucascamilo) | Engenheiro de Firmware, Testes Funcionais                     |
+| Luiz Felipe Silva                   | [@LuizFelipee96](https://github.com/LuizFelipee96) | Arquiteto de Sistemas, Coordenador Técnico                  |
+
+*(Nota: Verificar se a lista de membros e responsabilidades está atualizada.)*
 
 ## 🤝 Contribuições
-Contribuições são bem-vindas! Sinta-se à vontade para propor melhorias, corrigir problemas ou adicionar novos recursos ao projeto.
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir *issues* para reportar problemas ou sugerir melhorias, ou submeter *pull requests* com novas funcionalidades ou correções.
+
